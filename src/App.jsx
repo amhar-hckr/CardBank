@@ -16,8 +16,10 @@ import {
   ArrowLeft,
 } from "lucide-react";
 
+// Main component exports
 export { MarketplaceTab, DumpsTab, AccountsTab, TutorialsTab, VerificationTab };
 
+// Main Application Component
 export default function SimulatedCardingWebsite() {
   const [activeTab, setActiveTab] = useState("market");
   const [showWarning, setShowWarning] = useState(true);
@@ -26,7 +28,7 @@ export default function SimulatedCardingWebsite() {
   const [cartCount, setCartCount] = useState(0);
   const [shippingMethod, setShippingMethod] = useState("standard");
 
-  // Educational warning banner
+  // Educational warning banner in red
   const EducationalWarningBanner = () => (
     <div
       className={`${
@@ -41,7 +43,7 @@ export default function SimulatedCardingWebsite() {
               EDUCATE PREVENT FROM GIVING SENCITIVE INFORMATION
             </h2>
             <p className="text-sm md:text-base text-justify">
-              This interface is a safe, controlled simulation created solely for
+              This interface is a safe, controlled  created solely for
               cybersecurity awareness and training. Do NOT trust any website,
               service, or individual requesting personal or financial
               information outside of verified and secure domains (e.g., .gov,
@@ -77,7 +79,7 @@ export default function SimulatedCardingWebsite() {
     },
   ];
 
-  // Simulated product data for educational demonstration
+  // Sample product card data for  demonstration
   const fakeCards = [
     {
       id: 1,
@@ -147,7 +149,7 @@ export default function SimulatedCardingWebsite() {
     },
   ];
 
-  // Add items to cart function (for educational demonstration only)
+  // Add items to cart function (for  demonstration only)
   const addToCart = () => {
     setCartCount((prevCount) => prevCount + 1);
   };
@@ -181,9 +183,19 @@ export default function SimulatedCardingWebsite() {
     }
   };
 
+
+// Main component render
+{/* Component Structure:
+         1. Educational Warning Banner
+         2. Header with search and cart
+         3. Navigation tabs
+         4. Stats Bar
+         5. Main Content
+         6. Footer
+      */}
   return (
     <div className="min-h-screen bg-gray-900 text-gray-200 w-screen px-5">
-      {/* Educational Warning Banner */}
+      {/* Warning Banner */}
       <EducationalWarningBanner />
 
       {/* Header */}
@@ -194,7 +206,7 @@ export default function SimulatedCardingWebsite() {
               <CreditCard size={24} className="text-red-500" />
               <h1 className="text-xl font-bold">
                 CardShield{" "}
-                <span className="text-red-500">Educational Demo</span>
+                <span className="text-red-500">Buy or Sell</span>
               </h1>
             </div>
 
@@ -340,12 +352,12 @@ export default function SimulatedCardingWebsite() {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <p className="text-sm">
-              Educational Simulation - Not A Real Service
+              Profesionel CardBanking For carding By PRATAEX
             </p>
             <p className="text-xs mt-2">
-              This demonstration is intended solely for cybersecurity education,
-              awareness, and research. Created for informational purposes to
-              help identify and prevent credit card fraud.
+            This interface is designed to accurately reflect real carding sites for the purpose of cybersecurity research,
+            threat analysis, and fraud prevention. Intended for use by authorized professionals to better understand 
+            and combat payment card crime.
             </p>
           </div>
         </div>
